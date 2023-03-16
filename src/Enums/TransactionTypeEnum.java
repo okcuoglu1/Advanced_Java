@@ -2,11 +2,11 @@ package Enums;
 
 public enum TransactionTypeEnum {
 
-    DEPOSIT(1),
-    WITHDRAW(2),
-    TRANSFER(3),
-    PAYMENT(4),
-    OTHER(5);
+    DEPOSIT(10), //0
+    WITHDRAW(20), //1
+    TRANSFER(30),//2
+    PAYMENT(40),//3
+    OTHER(50);//4
 
     private final int code;
 

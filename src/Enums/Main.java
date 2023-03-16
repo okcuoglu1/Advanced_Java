@@ -1,5 +1,7 @@
 package Enums;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -39,6 +41,20 @@ public class Main {
      }
 
      public static void useEnumType(TransactionTypeEnum transactionType){
+//        if(transactionType.getCode()==1){
+//            System.out.println("Para yatırılıyor...");
+//
+//        }
+
+
+         //Ordinal kullanmanın riski vardır?
+         //Enumların sırası değişirse sıkıntı yasanabilir.
+         //Yeni bir enum eklemek ya da enumı silmek sıralarını değiştirir.
+
+//         if(transactionType.ordinal()==0){
+//             System.out.println("Para yatırılıyor...");
+//         }
+
         if(transactionType==TransactionTypeEnum.DEPOSIT){
             System.out.println("Para yatırılıyor...");
         } else if (transactionType==TransactionTypeEnum.WITHDRAW) {
@@ -50,6 +66,21 @@ public class Main {
         }else if (transactionType==TransactionTypeEnum.OTHER){
             System.out.println("Diğer işlemler...");
         }
+
+        //Enumun ismini görmek icin
+         System.out.println("Enums name : " + transactionType.name());
+
+        //Enumun sırasını görmek için
+         System.out.println("Enum sırası: " + transactionType.ordinal());
+
+
+
+
      }
+
+
+
+
+
 
 }
