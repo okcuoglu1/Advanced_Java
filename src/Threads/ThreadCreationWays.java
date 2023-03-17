@@ -25,6 +25,11 @@ public class ThreadCreationWays {
         Thread thread3 = new Thread(new Runnable() {
             @Override
             public void run() {
+                try {
+                    Thread.sleep(500);//Threadi istedigimiz saniye kadar duraklatabiliyoruz.
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("Current Thread : " + Thread.currentThread().getName());
                 System.out.println("Bu Thread isimsiz class ile oluşturuldu...");
 
@@ -46,6 +51,17 @@ public class ThreadCreationWays {
         }
         );
         thread4.start();
+
+        Thread thread5 = new Thread(()-> {
+
+            System.out.println("Current Thread : " + Thread.currentThread().getName());
+            System.out.println("Bu thread LAMBDA ile oluşturuldu.");
+        }
+        );
+
+        thread5.start();
+
+        System.out.println("Main methodun işlemi burada bitti");
 
 
 
