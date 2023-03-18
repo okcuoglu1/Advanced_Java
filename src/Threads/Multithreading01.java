@@ -1,6 +1,6 @@
 package Threads;
 
-public class Multithreading01 {
+public class  Multithreading01 {
     public static void main(String[] args) {
         long start=System.currentTimeMillis();
         CounterWithoutMultiThread counter1=new CounterWithoutMultiThread("Ebubekir");
@@ -25,8 +25,8 @@ public class Multithreading01 {
         counter4.setName("Abdullah");
 
         try {
-            counter3.join();//main threade counter3 threadinin işlemi bitene kadar bekle
-            counter4.join();//main threade counter4 threadinin işlemi bitene kadar bekle
+            counter3.join();//main threade counter3 threadinin işlemi bitene kadar digerleri beklesin
+            counter4.join();//main threade counter4 threadinin işlemi bitene kadar digerleri beklesin
             //sonra tekrar main thread devam etsin.
 
         } catch (InterruptedException e) {

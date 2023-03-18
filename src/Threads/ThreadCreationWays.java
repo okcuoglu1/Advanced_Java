@@ -1,8 +1,11 @@
 package Threads;
+//Thread bir processin parçasıdır, birden fazla thread kullandığımızda
+//multithread yaparak eş zamanlı görevler yapabiliriz, CPU en verimli şekilde kullanabiliriz.
 
 public class ThreadCreationWays {
 
     public static void main(String[] args) {
+
         //ilk çalışan main threaddir, görelim:
         System.out.println("Current Thread " + Thread.currentThread().getName()); //Current Thread main
 
